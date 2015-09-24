@@ -1,13 +1,24 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
-# Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+alias console="bundle exec rails console"
+alias consoleprod="bundle exec rails console production_ro"
+alias consoleprodrw="bundle exec rails console production"
+alias env="env | sort"
+alias gems-reindex="ssh -q -t gems PATH=/opt/ruby-1.9.2-p180-gems/bin:$PATH sudo /opt/amtools/bin/geminabox-reindex.rb"
+alias migrate="bundle exec rake db:migrate"
+alias migration="bundle exec rails generate migration"
+# alias mysqld-start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+# alias mysqld-stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+# alias remigrate="bundle exec rake db:rollback && bundle exec rake db:migrate"
+alias rollback="bundle exec rake db:rollback"
+alias runner="bundle exec rails runner"
+# alias spring="bundle exec spring"
+# alias springrunner="bundle exec spring rails runner"
+alias test="bundle exec ruby -Itest -Ilib"
+alias tests="bundle exec rake test"
+#alias tests="bundle exec rake minitest:all:quick"
+#alias tests="bundle exec rake minitest:quick"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
