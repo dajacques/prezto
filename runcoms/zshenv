@@ -12,8 +12,7 @@ fi
 
 if [[ -o interactive ]]
 then
-  # Colors are hardcoded in prezto - https://github.com/sorin-ionescu/prezto/blob/master/modules/utility/init.zsh
-  # export LSCOLORS='dxgxcxdxcxegedabagacad'
-  # export LS_COLORS='dxgxcxdxcxegedabagacad'
+  export LSCOLORS='dxgxcxdxcxegedabagacad'
+  export LS_COLORS='dxgxcxdxcxegedabagacad'
   export REPORTTIME=10
 fi
