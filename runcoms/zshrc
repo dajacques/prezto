@@ -9,8 +9,10 @@ alias env="env | sort"
 alias gems-reindex="ssh -q -t gems PATH=/opt/ruby-1.9.2-p180-gems/bin:$PATH sudo /opt/amtools/bin/geminabox-reindex.rb"
 alias migrate="bundle exec rake db:migrate"
 alias migration="bundle exec rails generate migration"
+alias migratetest="bundle exec rake db:migrate RAILS_ENV=test"
 # alias mysqld-start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 # alias mysqld-stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+alias nom="rm -rf node_modules && npm cache clear && npm i"
 # alias remigrate="bundle exec rake db:rollback && bundle exec rake db:migrate"
 alias rollback="bundle exec rake db:rollback"
 alias runner="bundle exec rails runner"
@@ -22,3 +24,11 @@ alias tests="bundle exec rake test"
 #alias tests="bundle exec rake minitest:quick"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+function chpwd() {
+  emulate -L zsh
+  [ -f .nvmrc ] && nvm use
+}
+
+export NVM_DIR="/Users/djacqu001/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
