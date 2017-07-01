@@ -38,20 +38,11 @@ function prompt_dajacques_setup {
   zstyle ':prezto:module:git:info:clean' format ' %F{green}✔%f'
   zstyle ':prezto:module:git:info:dirty' format ' %F{red}✗%f'
   zstyle ':prezto:module:git:info:keys' format \
-<<<<<<< HEAD
-    'prompt' ' ($(coalesce "%b" "%p" "%C") ${git_info[rprompt]}%s%F{green}%f)' \
-    'rprompt' '%C%D'
-
-  # Define prompts.
-  PROMPT='%C${(e)git_info[prompt]} %F{yellow}%{$terminfo[bold]%}❯%{$terminfo[sgr0]%}%f '
-  # RPROMPT='${ruby_info[version]}'
-=======
     'prompt' ' ($(coalesce "%b" "%p" "%c") ${git_info[rprompt]}%s%F{green}%f)' \
     'rprompt' '%C%D'
 
   # Define prompts.
   PROMPT='%~${(e)git_info[prompt]} %F{yellow}%{$terminfo[bold]%}❯%{$terminfo[sgr0]%}%f '
->>>>>>> initial customization
   RPROMPT=''
 }
 
