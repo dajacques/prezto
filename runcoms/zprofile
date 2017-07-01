@@ -77,3 +77,5 @@ fi
 TMPPREFIX="${TMPDIR%/}/zsh"
 
 export LSCOLORS='dxgxcxdxcxegedabagacad'
+
+export PATH="$HOME/.cargo/bin:$PATH"
