@@ -42,7 +42,8 @@ function prompt_dajacques_setup {
     'rprompt' '%C%D'
 
   # Define prompts.
-  PROMPT='%~${(e)git_info[prompt]} %F{yellow}%{$terminfo[bold]%}❯%{$terminfo[sgr0]%}%f '
+  # PROMPT='%~${(e)git_info[prompt]} %F{yellow}%{$terminfo[bold]%}❯%{$terminfo[sgr0]%}%f '
+  PROMPT='${SSH_TTY:+"%n@%m "}%~${(e)git_info[prompt]} %F{yellow}%{$terminfo[bold]%}❯%{$terminfo[sgr0]%}%f '
   RPROMPT=''
 }
 
